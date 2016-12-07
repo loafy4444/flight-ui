@@ -1,6 +1,7 @@
 package com.cooksys.flight.variant.component;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.concurrent.ThreadLocalRandom;
 
 import org.springframework.stereotype.Component;
@@ -11,9 +12,9 @@ import com.cooksys.flight.variant.location.entity.Cities;
 @Component
 public class FlightGenerator {
 
-	public ArrayList<Flight> generateNewFlightList() {
+	public List<Flight> generateNewFlightList() {
 		
-		ArrayList<Flight> result = new ArrayList<>();
+		List<Flight> result = new ArrayList<>();
 
 		for (int i = 0; i < 25; i++) {
 

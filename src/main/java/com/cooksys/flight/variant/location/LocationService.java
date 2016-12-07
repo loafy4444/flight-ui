@@ -2,27 +2,13 @@ package com.cooksys.flight.variant.location;
 
 import java.util.List;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
-
 import com.cooksys.flight.variant.location.entity.Location;
 
-@Service
-public class LocationService {
-	
-	@Autowired
-	LocationRepository repo;
-		
-	public List<Location> getAll()
-	{
-		return repo.findAll();
-	}
+public interface LocationService {
 
-	public Location get(long id) {
-		return repo.findById(id);
-	}
+	public List<Location> getAll();
+
+	public Location get(long id);
 	
-	public Location get(String name) {
-		return repo.findByCity(name);
-	}
+	public Location get(String name);
 }
